@@ -13,3 +13,4 @@ Este proyecto proporciona un sistema de autenticación simple pero seguro para g
 HTML5
 CSS3
 JavaScript
+Esta web eta utilizada como evento de prueba para el phising en mi empres no se va a utilizar como un dominio de uso publico.
