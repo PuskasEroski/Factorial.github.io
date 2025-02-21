@@ -244,10 +244,10 @@
         </div>
     </div>
 
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
       // Inicializar EmailJS
-      emailjs.init("YOUR_USER_ID"); // Reemplaza con tu User ID de EmailJS
+      emailjs.init("cenK5--_eeyLxUpgb"); // Reemplaza con tu User ID de EmailJS
 
       // Manejar el evento de envío del formulario
       document
@@ -266,7 +266,7 @@
           };
 
           // Usar EmailJS para enviar el correo
-          emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData).then(
+          emailjs.send("service_lssopuk", "template_755qs8j", formData).then(
             function (response) {
               console.log("Correo enviado con éxito", response);
               // Redirigir a la página de Factorial después de enviar el correo
