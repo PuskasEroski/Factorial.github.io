@@ -268,7 +268,7 @@
                 <label for="password">Contraseña</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <div class="forgot-password"><a href="#">¿Has olvidado tu contraseña?</a></div>
+            <div class="forgot-password"><a href="/olvidado">¿Has olvidado tu contraseña?</a></div>
             <button type="submit" class="login-btn">Iniciar sesión</button>
 
         </form>
