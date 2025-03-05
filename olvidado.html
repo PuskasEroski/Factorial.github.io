@@ -156,29 +156,29 @@
         text-decoration: none;
     }
 
-    .login-btn {
-        width: 400px;
-        padding: 20px;
-        background: #ff3366;
-        color: white;
-        border: none;
-        border-radius: 20px;
-        cursor: pointer;
-        font-size: 16px;
-    }
+    .login-btn, .back-btn {
+    box-sizing: border-box; /* Incluye borde y padding dentro del ancho total */
+    width: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+}
 
-    .back-btn {
-        width: 400px;
-        padding: 20px;
-        background: #ffffff;
-        color: rgb(0, 0, 0);
-        border: 1px solid;
-        border-color: #000000;
-        border-radius: 20px;
-        cursor: pointer;
-        font-size: 16px;
-        text-decoration: none;
-    }
+.login-btn {
+    background: #ff3366;
+    color: white;
+    border: none;
+}
+
+.back-btn {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 1px solid #000000;
+    text-decoration: none;
+}
 
     .login-btn:hover {
         width: 400px;
@@ -268,7 +268,7 @@
             </div>
             <button type="submit" class="login-btn">Enviar instrucciones para restablecer la <br>contraseña</button>
            <br> <br> <br>
-            <button a href="./index.html" type="submit" class="back-btn">Volver</a>
+            <a href="./index.html" type="submit" class="back-btn">Volver</a>
 
         </form>
     </div>
