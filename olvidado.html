@@ -167,6 +167,18 @@
         font-size: 16px;
     }
 
+    .back-btn {
+        width: 400px;
+        padding: 20px;
+        background: #ffffff;
+        color: rgb(0, 0, 0);
+        border: 1px solid;
+        border-color: #000000;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
     .login-btn:hover {
         width: 400px;
         padding: 20px;
@@ -217,6 +229,11 @@
         padding: 12px;   /* Reduce padding */
     }
 
+    .back-btn {
+        width: 100%;     /* Ocupa todo el ancho en móviles */
+        padding: 12px;   /* Reduce padding */
+    }
+
     .register-link {
         position: static; /* Quita posición absoluta para móviles */
         text-align: center;
@@ -236,7 +253,7 @@
         <a href="https://factorialhr.com/">
             <img src="logo_factorial2.png" alt="Logo" class="logo">
         </a>
-        <h3 id="sesion">Confirme su correo <br /> electrónico</h3>
+        <h3 id="sesion">¿Has olvidado tu contraseña?</h3>
         <div class="header-block__line"></div>
         <form id="loginForm">
             <div class="input-container">
@@ -248,7 +265,9 @@
                 <label for="email">Confirmar correo electrónico</label>
                 <input type="text" id="password" name="password" required>
             </div>
-            <button type="submit" class="login-btn">Enviar confirmación</button>
+            <button type="submit" class="login-btn">Enviar instrucciones para restablecer la <br>contraseña</button>
+           <br> <br> <br>
+            <a type="submit" class="back-btn">Volver</a>
 
         </form>
     </div>
